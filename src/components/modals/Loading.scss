@@ -1,0 +1,30 @@
+.loading-section{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loading{
+        border: 3px solid transparent;
+        border-top-color: hsl(0, 0%, 30%);
+        border-right-color: hsl(0, 0%, 30%);
+        width: clamp(2.5rem, 2.067rem + 1.067vw, 3rem);
+        height: clamp(2.5rem, 2.067rem + 1.067vw, 3rem);
+        border-radius: 50%;
+        animation: spinning 1s linear infinite;
+    }
+
+    @keyframes spinning {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

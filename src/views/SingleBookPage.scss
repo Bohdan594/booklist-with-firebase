@@ -1,0 +1,180 @@
+.single-book{
+    margin-top: 2rem;
+
+    .full-info{
+        background-color: hsl(0, 0%, 0%, 0.2);
+        position: fixed;
+        z-index: 500;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .main-info-section{
+            direction: rtl;
+            max-width: 50rem;
+            background-color: white;
+            padding: 1.25rem 2.5rem;
+            position: relative;
+            margin-inline: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            max-height: 30rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            button{
+                position: absolute;
+                width: 16px;
+                right: 5px;
+                top: 3px;
+
+                :hover{
+                    opacity: 90%;
+                }
+            }
+
+            p{
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+            }
+
+            p.synopsis{
+                text-align: justify;
+                text-align-last: left;
+            }
+
+            .author, .title{
+                font-weight: bold;
+            }
+        }
+    }
+
+    .btn-back{
+        color: black;
+        background-color: rgb(215, 215, 215);
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: clamp(1em, 0.931em + 0.222vw, 1.125em);
+    }
+
+    .book-info{
+        margin-top: 2rem;
+        display: flex;
+        gap: 4rem;
+
+        .book-img{
+            aspect-ratio: 2 / 3;
+            overflow: hidden;
+            max-width: 15rem;
+            border-radius: 8px;
+            box-shadow: 5px 5px 10px hsl(0, 0%, 0%, 30%);
+            position: relative;
+
+            p{
+                color: white;
+                position: absolute;
+                left: 50%;
+                bottom: 50%;
+                transform: translate(-50%, 50%);
+                font-weight: bold;
+                font-size: clamp(0.9em, 0.64em + 0.64vw, 1.2em);
+                text-align: center;
+                width: 80%;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .text{
+            display: flex;
+            flex-direction: column;
+
+            h2{
+                font-size: clamp(1.3em, 0.911em + 1.244vw, 2em);
+            }
+
+            h3{
+                margin-top: 0.5rem;
+                font-size: clamp(1.05em, 0.689em + 1.156vw, 1.7em);
+            }
+
+            p{
+                margin-top: 1.5rem;
+                max-width: 50rem;
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+            }
+
+            .see-full{
+                margin-top: 0.5rem;
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+                font-style: italic;
+                color: rgb(46, 46, 244);
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            .erase-btn{
+                align-self: flex-start;
+                color: red;
+                font-weight: 700;
+                cursor: pointer;
+                margin-top: 1.5rem;
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+            }
+        }
+        
+        .is-read{
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-top: 1.5rem;
+
+            input{
+                cursor: pointer;
+            }
+
+            label{
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .err{
+        margin-top: 2rem;
+        font-size: clamp(0.9em, 0.775em + 0.4vw, 1.125em);
+    }
+
+    @media (max-width: 810px){
+        .book-info{
+            flex-direction: column;
+            gap: 2rem;
+
+            .book-img{
+                align-self: center;
+            }
+
+            .text{
+                h2{
+                    text-align: center;
+                }
+
+                h3{
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px){
+        button{
+            align-self: center;
+        }
+    }
+}

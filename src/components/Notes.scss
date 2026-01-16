@@ -1,0 +1,200 @@
+.notes{
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .are-you-sure{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.2);
+
+        .modal{
+            position: relative;
+            background-color: white;
+            padding: 1.5rem 2.5rem;
+            border-radius: 8px;
+            margin-inline: 1rem;
+
+            .close-btn{
+                position: absolute;
+                top: 0.2rem;
+                right: 0.2rem;
+                color: black;
+
+                :hover{
+                    opacity: 90%;
+                }
+            }
+
+            h4{
+                margin-top: 0.5rem;
+                text-align: center;
+            }
+
+            .btns{
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+                gap: 2.5rem;
+
+                .yes{
+                    background-color: rgb(183, 183, 183);
+                    padding: 5px 20px;
+                    border-radius: 5px;
+                    font-size: clamp(0.9em, 0.789rem + 0.356vw, 1.1em);
+                    color: black;
+                }
+
+                .no{
+                    background-color: hsl(230, 58%, 42%);
+                    color: white;
+                    border-radius: 5px;
+                    padding: 5px 20px;
+                    font-size: clamp(0.9em, 0.789rem + 0.356vw, 1.1em);
+                }
+            }
+        }
+    }
+
+    .notes-message{
+        font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+    }
+
+    .notes-err{
+        color: red;
+    }
+
+    .note{
+        max-width: 50rem;
+        background-color: rgb(238, 238, 238);
+        padding: 20px 30px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 20px hsl(0, 0%, 0%, 20%);
+        position: relative;
+
+        &:hover{
+            .erase-note{
+                display: block;
+            } 
+        }
+
+        .erase-note{
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            top: 0.4rem;
+            right: 0.8rem;
+            font-size: clamp(0.7rem, 0.644rem + 0.178vw, 0.8rem);
+            color: red;
+        }
+
+        @media (hover: none) {
+            .erase-note {
+                display: block;
+            }
+        }
+
+
+        h3{
+            font-size: clamp(1.05em, 0.967em + 0.267vw, 1.2em);
+        }
+
+        p{
+           font-size: clamp(0.85em, 0.767em + 0.267vw, 1em); 
+        }
+
+    }
+
+    .add-note{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5rem;
+
+        .details{
+            display: flex;
+            align-items: center;
+            gap: 0.2px;
+            background-color: rgb(215, 215, 215);
+            padding: 10px 20px;
+            width: fit-content;
+            border-radius: 8px;
+            cursor: pointer;
+
+            p{
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+            }
+
+            div{
+                font-size: 1.5rem;
+            }
+        }
+
+        .note-fields{
+            margin-top: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            background-color: rgb(239, 239, 239);
+            padding: 20px 20px;
+            border-radius: 10px;
+            
+            label{
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+            }
+
+            input{
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+                padding: 5px 10px;
+                max-width: 100%;
+                border: none;
+                border-radius: 10px;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            textarea{
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+                padding: 5px 10px;
+                padding-bottom: 70px;
+                max-width: 100%;
+                border: none;
+                border-radius: 10px;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            .red::placeholder{
+                color: red;
+            }
+
+            .note-btn{
+                color: black;
+                background-color: rgb(215, 215, 215);
+                padding: 10px 30px;
+                border-radius: 8px;
+                width: fit-content;
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+                margin: auto;
+            }
+        }
+
+        .mandatory-note{
+            color: red;
+            font-size: clamp(0.7em, 0.644em + 0.178vw, 0.8em);
+            align-self: center;
+        }
+    }
+}

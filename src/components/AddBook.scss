@@ -1,0 +1,130 @@
+.add-book-section{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 0.444rem + 1.778vw, 2rem);
+    background-color: rgb(239, 239, 239);
+    border-radius: 10px;
+
+    h1{
+        font-size: clamp(1.2em, 0.756em + 1.422vw, 2em);
+    }
+
+    form.add-form{
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1rem, 0.444rem + 1.778vw, 2rem);
+
+        .form-title{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            label{
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+            }
+
+            input{
+                padding: 0.3rem 0.5rem;
+                border: none;
+                border-radius: 10px;
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+
+        .form-cover{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            label{
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+            }
+
+            input{
+                padding: 0.3rem 0.5rem;
+                max-width: 100%;
+                border: none;
+                border-radius: 10px;
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+
+        .form-author{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            label{
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+            }
+
+            input{
+                padding: 0.3rem 0.5rem;
+                border: none;
+                border-radius: 10px;
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+
+        .form-synopsis{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            label{
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+            }
+
+            #synopsis{
+                padding: 0.3rem 0.5rem;
+                padding-bottom: 5rem;
+                max-width: 100%;
+                border: none;
+                border-radius: 10px;
+                resize: none;
+                font-size: clamp(0.85em, 0.767em + 0.267vw, 1em);
+
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+
+        button{
+            color: black;
+            background-color: rgb(216, 216, 216);
+            padding: 10px 20px;
+            border-radius: 8px;
+            max-width: 50%;
+            align-self: center;
+        }
+    }
+
+    .mandatory-fields{
+        color: red;
+        font-size: clamp(0.7em, 0.644em + 0.178vw, 0.8em);
+        align-self: center;
+    }
+
+    .red-txt::placeholder{
+        color: red;
+    }
+}

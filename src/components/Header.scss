@@ -1,0 +1,134 @@
+.nav-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    margin-top: 1rem;
+
+    .modal-logout{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.2);
+
+        .inner-logout{
+            position: relative;
+            background-color: white;
+            padding: 1.5rem 2.5rem;
+            border-radius: 8px;
+            margin-inline: 1rem;
+
+            .close-lg{
+                position: absolute;
+                top: 0.2rem;
+                right: 0.2rem;
+                color: black;
+
+                :hover{
+                    opacity: 90%;
+                }
+            }
+
+            h4{
+                margin-top: 0.5rem;
+                text-align: center;
+            }
+
+            .btns{
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+                gap: 2.5rem;
+
+                .yes-lg{
+                    color: black;
+                    background-color: rgb(183, 183, 183);
+                    padding: 5px 20px;
+                    border-radius: 5px;
+                    font-size: clamp(0.9em, 0.789rem + 0.356vw, 1.1em);
+                }
+
+                .no-lg{
+                    background-color: hsl(230, 58%, 42%);
+                    color: white;
+                    border-radius: 5px;
+                    padding: 5px 20px;
+                    font-size: clamp(0.9em, 0.789rem + 0.356vw, 1.1em);
+                }
+            }
+        }
+    }
+
+    .nav-text{
+        display: flex;
+        align-items: center;
+
+        i{
+            font-size: clamp(1em, 0.444em + 1.778vw, 2em);
+        }
+
+        h1{
+            font-size: clamp(1em, 0.444em + 1.778vw, 2em);
+        }
+    }
+
+    .btns{
+        display: flex;
+        gap: 1rem;
+
+        .books-btn{
+            color: black;
+            background-color: rgb(215, 215, 215);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: clamp(0.9rem, 0.789rem + 0.356vw, 1.1rem);
+        }
+
+        .add-book-btn{
+            color: black;
+            background-color: rgb(215, 215, 215);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: clamp(0.9rem, 0.789rem + 0.356vw, 1.1rem);
+        }
+
+        a.active button{
+            background-color: #1cab47;
+            color: white;
+        }
+
+        .logout-btn{
+            text-align: center;
+            font-size: 1rem;
+            align-self: center;
+            font-style: italic;
+            color: rgb(46, 46, 244);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    @media (max-width: 950px){
+        flex-direction: column;
+        gap: 1rem;
+
+        .btns{
+            margin-bottom: 1rem;
+
+            .books-btn{
+                padding: 5px 10px;
+            }
+
+            .add-book-btn{
+                padding: 5px 10px;
+            }
+        }
+
+    }
+}
