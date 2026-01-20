@@ -72,12 +72,32 @@
                     outline: none;
                 }
 
-                .password{
-                    padding: 5px 10px;
-                    border-radius: 5px;
-                    border: 1px solid hsl(0, 0%, 75%, 0.5);
-                    outline: none;
+                .pass-form{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.2rem;
+
+                    .password{
+                        padding: 5px 10px;
+                        width: 100%;
+                        border-radius: 5px;
+                        border: 1px solid hsl(0, 0%, 75%, 0.5);
+                        outline: none;
+                    }
+
+                    .but-pass{
+                        padding: 9.5px 8px;
+                        border-radius: 5px;
+                        border: 1px solid hsl(0, 0%, 75%, 0.5);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                    }
                 }
+
+                
             }
 
             .confirm-login{

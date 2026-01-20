@@ -21,6 +21,7 @@ function LoginPage(){
     const [userCredentials, setUserCredentials] = useState({});
     const [userEmail, setUserEmail] = useState();
     const [emailNotWritten, setEmailNotWritten] = useState(false);
+    const [showedPass, setShowedPass] = useState(false);
 
     function handleCredentials(e){
         setUserCredentials({...userCredentials, [e.target.name]: e.target.value});
@@ -116,7 +117,7 @@ function LoginPage(){
                         </div>
                         <div className='form-part'>
                             <label htmlFor="password">Password</label>
-                            <input onChange={(e) => handleCredentials(e)} className='password' id='password' name='password' type="password" placeholder='Password...' required/>
+                            <div className='pass-form'><input onChange={(e) => handleCredentials(e)} className='password' id='password' name='password' type={showedPass ? "text" : "password"} placeholder='Password...' required/><div onClick={() => setShowedPass(!showedPass)} className='but-pass'>{showedPass ? <i class="fa-regular fa-eye-slash"></i> : <i className="fa-regular fa-eye"></i>}</div></div>
                         </div>
                         {
                             activeBtn === 'login' ?
