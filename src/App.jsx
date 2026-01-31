@@ -5,14 +5,12 @@ import LoginPage from './views/LoginPage'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { selectUser } from './store/userSlice'
-import { useState } from 'react'
 
 import './App.scss'
 
 function App() {
 
   const user = useSelector(selectUser);
-  const [filterBy, setFilterBy] = useState("");
 
   return (
     <>
