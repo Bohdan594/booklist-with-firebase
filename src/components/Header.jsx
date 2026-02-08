@@ -44,7 +44,7 @@ function Header(){
 
                 <div className='nav-text'>
                     <i className="fa-solid fa-book fa-xl" style={{color: '#a12b2b'}}></i>
-                    <h1>Your list of books</h1>
+                    <h1>Your list of books. Read and relax</h1>
                 </div>
 
                 <div className='btns'>
